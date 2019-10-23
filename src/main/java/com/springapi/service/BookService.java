@@ -2,8 +2,8 @@ package com.springapi.service;
 
 import com.springapi.models.Author;
 import com.springapi.models.Book;
-import com.springapi.repo.AuthorsRepo;
-import com.springapi.repo.BookRepo;
+import com.springapi.repositories.mongo.AuthorsRepo;
+import com.springapi.repositories.mongo.BookRepo;
 
 import java.util.List;
 import org.springframework.stereotype.Service;

@@ -17,8 +17,9 @@ public class Book {
     private ArrayList<String> authors = new ArrayList<>();
     private double price;
     private int stock; // 32bit
+    private String discount;
 
-    // public Book(){}
+    public Book(){}
     public Book(String title, String author, double price, String isbn, int stock) {
         this.title = title;
         this.author = author;
@@ -63,6 +64,13 @@ public class Book {
     
     public int getStock() {
         return stock;
+    }
+
+    public String getDiscount(){
+        return this.discount;
+    }
+    public void setDiscount(String discount){
+        this.discount = discount;
     }
     
     // Setters

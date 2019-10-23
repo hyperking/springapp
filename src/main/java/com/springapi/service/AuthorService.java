@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.springapi.models.Author;
-import com.springapi.repo.AuthorsRepo;
+import com.springapi.repositories.mongo.AuthorsRepo;
 
 /**
  * AuthorService

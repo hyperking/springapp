@@ -8,7 +8,7 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 import com.springapi.models.User;
-import com.springapi.repo.UserRepo;
+import com.springapi.repositories.mongo.UserRepo;
 
 /**
  * UserService

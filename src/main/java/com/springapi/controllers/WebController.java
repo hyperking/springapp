@@ -39,18 +39,6 @@ public class WebController {
         logger.info("REQUEST MADE to home page");
         return "index";
     }
-    
-    @RequestMapping("/{path}")
-    public String home(Model ctx, @PathVariable(required = false) String path, HttpServletRequest request) {
-        String reqString = request.getRequestURI().replace("/","");
-        String template = (reqString != null && !reqString.isEmpty()) ? path + ".html" : "home.html";
-        if(template.equals("add-book.html") ){
-            ctx.addAttribute("authors", authorsService.getDBauthors());
-        }
-        ctx.addAttribute("template", template);
-        ctx.addAttribute("catalog", books.getDBBooks());
-        return "index";
-    }
 
     
 }

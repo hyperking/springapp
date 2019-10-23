@@ -1,7 +1,7 @@
 package com.springapi.service;
 
 import com.springapi.models.Log;
-import com.springapi.repo.LogRepo;
+import com.springapi.repositories.mongo.LogRepo;
 import com.springapi.utils.ReadFile;
 
 import java.io.IOException;
