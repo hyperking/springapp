@@ -24,7 +24,10 @@ public class BookService {
     {
         return booksDB.findAll();
     }
-
+    public List<Author> getDBAuthors()
+    {
+        return authorsDB.findAll();
+    }
     public Long count() {
         // return bookRegistry.size();
         return booksDB.count();
@@ -32,7 +35,7 @@ public class BookService {
 
     public Book getBook(String bookid) {
         // Return book associated with bookid
-        if (bookid != "") {
+        if (null != bookid) {
             return booksDB.findByIsbn(bookid);
         }
         return null;

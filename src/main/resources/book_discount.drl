@@ -1,9 +1,0 @@
-global com.springapi.models.Book book;
-dialect  "mvel"
-
-rule "Calculate Book Discount"
-    when
-        bookInstance:BookFact(price > 100);
-    then
-        book.setDiscount(0);
-end

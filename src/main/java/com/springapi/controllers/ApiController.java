@@ -1,14 +1,19 @@
 package com.springapi.controllers;
 
+import com.springapi.models.Author;
 import com.springapi.models.Book;
 import com.springapi.service.BookService;
 import com.springapi.service.LoggerService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -36,20 +41,25 @@ public class ApiController {
     public Collection<Book> getBooks() {
         return bookCatalog.getDBBooks();
     }
+    @RequestMapping("/catalog/authors")
+    @ResponseBody
+    public Collection<Author> getAuthors() {
+        return bookCatalog.getDBAuthors();
+    }
 
     @PostMapping("/catalog/addbook")
     @ResponseBody
-    public String addItem(@ModelAttribute Book newbook) {
+    public HashMap<String, Object> addItem(@RequestBody Book newbook) {
+        logger.info("Added new book");
         bookCatalog.addBook(newbook);
-        // staticBooks.addBook(newbook);
-        return "book added!";
+        api_res.put("message", "book added");
+        return api_res;
     }
 
     @PostMapping("/catalog/updatebook")
     @ResponseBody
     public String updateBook(@ModelAttribute Book alteredBook) {
         bookCatalog.updateBook(alteredBook);
-        // staticBooks.updateBook(alteredBook);
         return "catalog";
     }
 

@@ -1,41 +1,41 @@
-package com.springapi.entities;
+// package com.springapi.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+// import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.*;
-import javax.validation.constraints.Size;
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+// import javax.persistence.*;
+// import javax.validation.constraints.Size;
+// import java.io.Serializable;
+// import java.util.HashSet;
+// import java.util.Set;
 
-import static javax.persistence.CascadeType.*;
+// import static javax.persistence.CascadeType.*;
 
-@Entity
-@Table(name = "Person")
-public class Person implements Serializable {
+// @Entity
+// @Table(name = "Person")
+// public class Person implements Serializable {
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name = "id", unique = true, nullable = false)
-private Long id;
+// @Id
+// @GeneratedValue(strategy = GenerationType.IDENTITY)
+// @Column(name = "id", unique = true, nullable = false)
+// private Long id;
 
-@Column(nullable = false)
-@Size(max = 25)
-private String name;
+// @Column(nullable = false)
+// @Size(max = 25)
+// private String name;
 
-public Person() {
-}
+// public Person() {
+// }
 
-public Long getId() {
-return id;
-}
+// public Long getId() {
+// return id;
+// }
 
-public String getName() {
-return name;
-}
+// public String getName() {
+// return name;
+// }
 
-public void setName(String name) {
-    this.name = name;
-}
+// public void setName(String name) {
+//     this.name = name;
+// }
 
-}
+// }

@@ -9,9 +9,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "authors")
 public class Author {
     @Id
-    public String id;
-    public String firstName;
-    public String lastName;
+    private String id;
+    private String firstName;
+    private String lastName;
 
     public Author() { }
 
