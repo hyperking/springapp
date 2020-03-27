@@ -1,0 +1,1 @@
+insert into people values (999, 'Donald Duck', 'persident');
