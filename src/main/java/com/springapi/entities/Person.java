@@ -1,41 +1,55 @@
-// package com.springapi.entities;
+ package com.springapi.entities;
 
-// import com.fasterxml.jackson.annotation.JsonIgnore;
+ import javax.persistence.*;
+ import java.io.Serializable;
 
-// import javax.persistence.*;
-// import javax.validation.constraints.Size;
-// import java.io.Serializable;
-// import java.util.HashSet;
-// import java.util.Set;
+ @Entity
+ @Table(name = Person.TABLE_NAME)
+ public class Person {
+    public static final String TABLE_NAME = "people";
+    @Id
+    @GeneratedValue
+    private int pid;
+    private String fullName;
+    private String role;
+//    private String fName;
+//    private String lName;
+//    private String bio;
+//    private String picture;
+//    private long likes;
+//    private String ipAddress;
+//    private String email;
 
-// import static javax.persistence.CascadeType.*;
+     @Override
+     public String toString() {
+         return "Person{" +
+                 "pid=" + pid +
+                 ", fullName='" + fullName + '\'' +
+                 ", role='" + role + '\'' +
+                 '}';
+     }
 
-// @Entity
-// @Table(name = "Person")
-// public class Person implements Serializable {
+     public int getPid() {
+         return pid;
+     }
 
-// @Id
-// @GeneratedValue(strategy = GenerationType.IDENTITY)
-// @Column(name = "id", unique = true, nullable = false)
-// private Long id;
+     public void setPid(int pid) {
+         this.pid = pid;
+     }
 
-// @Column(nullable = false)
-// @Size(max = 25)
-// private String name;
+     public String getFullName() {
+         return fullName;
+     }
 
-// public Person() {
-// }
+     public void setFullName(String fullName) {
+         this.fullName = fullName;
+     }
 
-// public Long getId() {
-// return id;
-// }
+     public String getRole() {
+         return role;
+     }
 
-// public String getName() {
-// return name;
-// }
-
-// public void setName(String name) {
-//     this.name = name;
-// }
-
-// }
+     public void setRole(String role) {
+         this.role = role;
+     }
+ }

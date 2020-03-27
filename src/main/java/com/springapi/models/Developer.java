@@ -29,7 +29,7 @@ public class Developer {
 		this.picture = picture;
         this.likes = 0;
         this.ipAddress = ipAddress;
-        parseName(name);
+        parseName();
     }
 
 
@@ -106,22 +106,24 @@ public class Developer {
         this.email = this.firstName+"_"+this.lastName+"@bah.com".toLowerCase();
     }
 
-    public void parseName(String fullname) {
+    public void parseName() {
         Integer i = 1;
-        for (String part : fullname.split(" ")) {
-            switch (i) {
-            case 1:
-                this.firstName = part;
-                break;
-            case 2:
-                this.lastName = part;
-                break;
-            default:
-                this.lastName = this.lastName + " " + part;
-                break;
-            }
-            i++;
-        }
+        String fullname = this.firstName+" "+this.lastName;
+        this.name = fullname;
+//        for (String part : fullname.split(" ")) {
+//            switch (i) {
+//            case 1:
+//                this.firstName = part;
+//                break;
+//            case 2:
+//                this.lastName = part;
+//                break;
+//            default:
+//                this.lastName = this.lastName + " " + part;
+//                break;
+//            }
+//            i++;
+//        }
 
     }
 

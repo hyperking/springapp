@@ -4,3 +4,7 @@
 {"debug_level":"INFO","debug_timestamp":"2020-01-23 13:23:30","debug_thread":"http-nio-8070-exec-9","debug_file":"ApiController.java","debug_line":"53","debug_message":"Added new book"}
 {"debug_level":"INFO","debug_timestamp":"2020-01-23 16:24:16","debug_thread":"http-nio-8070-exec-10","debug_file":"ApiController.java","debug_line":"53","debug_message":"Added new book"}
 {"debug_level":"INFO","debug_timestamp":"2020-01-23 16:27:21","debug_thread":"http-nio-8070-exec-9","debug_file":"ApiController.java","debug_line":"53","debug_message":"Added new book"}
+{"debug_level":"INFO","debug_timestamp":"2020-02-15 18:02:28","debug_thread":"http-nio-8070-exec-1","debug_file":"WebController.java","debug_line":"39","debug_message":"REQUEST MADE to home page"}
+{"debug_level":"INFO","debug_timestamp":"2020-02-16 11:06:24","debug_thread":"http-nio-8070-exec-1","debug_file":"WebController.java","debug_line":"39","debug_message":"REQUEST MADE to home page"}
+{"debug_level":"INFO","debug_timestamp":"2020-02-16 13:24:02","debug_thread":"http-nio-8070-exec-1","debug_file":"WebController.java","debug_line":"39","debug_message":"REQUEST MADE to home page"}
+{"debug_level":"INFO","debug_timestamp":"2020-02-16 19:20:09","debug_thread":"http-nio-8070-exec-3","debug_file":"WebController.java","debug_line":"39","debug_message":"REQUEST MADE to home page"}
